@@ -1,0 +1,9 @@
+thread = 8 -- 启动多少个线程
+logger = nil --输出日志保存到logger项指定的文件中
+harbor = 0 -- skynet初期版本提供了“master/slave”集群模式，后来又提供了更适用的“cluster”集群模式。由于“master/slave”并不完备，因此不推荐使用，将它设置为0即可。
+start = "main"	-- main script，主服务入口，路径为config文件同目录下
+lua_path = "./skynet/lualib/?.lua;".."./skynet/lualib/?/init.lua".."./lualib/?.lua;"
+luaservice = "./skynet/service/?.lua;".."./game/?.lua"
+lualoader = "./skynet/lualib/loader.lua"
+cpath = "./skynet/cservice/?.so;".."cservice/?.so" -- 用c编写的服务模块的位置
+lua_cpath = "./skynet/luaclib/?.so;".."./luaclib/?.so"
